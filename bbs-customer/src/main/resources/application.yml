@@ -1,0 +1,18 @@
+#项目端口和路径
+server:
+  port: 8082
+  servlet:    context-path: /bbsc1
+
+#Springmvc的视图解析器
+spring:  mvc:    view:      prefix: /WEB-INF/jsp/      suffix: .jsp
+            # 设置匹配.action后缀的请求的配置
+    pathmatch:
+      use-suffix-pattern: false      use-registered-suffix-pattern: true
+# Dubbo
+dubbo:
+  application:
+    name: dubbo-consumer
+  registry:
+    address: zookeeper://127.0.0.1:2181
+  scan:
+    base-packages: com.im
